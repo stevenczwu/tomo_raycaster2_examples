@@ -1,12 +1,12 @@
 <html lang="en">
 	<head>
-		<title>Lidar - WebGL Volume Rendering</title>
+		<title>Lidar data</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
  
-		<script src="./libs/three.min.js"></script>
+		<script src="./libs/threejs/build/three.min.js"></script>
 		<script src="./libs/OrbitControls.js"></script>
-		<script src="./libs/dat.gui.min.js"></script>
+		<script src="./libs/dat.gui/dat.gui.min.js"></script>
 		<script src="./libs/dat.gui.helper.js"></script>
 <!-- 
 	 	<script src="../../tomo_raycaster2/build/volumeRaycaster.min.js"></script>
@@ -23,16 +23,17 @@
 		<img id="transferFunctionImg"/>
 
 		<script>
+
 			config = {
 				"dom_container_id": "container",
 				"slicemaps_paths": [
 					'lidar_2048x2048_12x12_n_0.jpg',
 				],
-				"gap_slices": [0, 110],
+				"slices_range": [0, 110],
 				"gray_min": 0.01,
 				"gray_max": 1.0,
 				"row_col": [12, 12],
-				"steps": 1024,
+				"steps": 100,
 				"absorption_mode": 1,
 				"tf_colors": [
                     {"pos": 0.0, "color": "#00007F"},
@@ -41,12 +42,12 @@
                     {"pos": 0.75, "color": "#FF9400"},
                     {"pos": 1.0, "color": "#7F0000"},
 	            ],
-
-				"auto_steps": false,
+	            "renderer_size": [512, 512],
+				"auto_steps": true,
 			};
 
-			rcl0 = new VRC.VolumeRaycaster(config);
-			InitGUI(rcl0.getConfig(), rcl0);
+			rcl2 = new VRC.VolumeRaycaster(config);
+			InitGUI(rcl2.getConfig(), rcl2);
 			
 		</script>
 

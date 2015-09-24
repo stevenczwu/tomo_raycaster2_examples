@@ -12,6 +12,7 @@ $ cd tomo_raycaster2_examples
 ```bash
 $ git submodule init
 $ git submodule update
+$ git submodule update --remote --merge
 ```
 ### 4. Go to the dir where stored tomo_raycaster2
 ```bash
@@ -28,19 +29,31 @@ $ sudo zypper in npm
 ```bash
 $ sudo pacman -S npm
 ```
+* Ubuntu 14.04
+```bash
+$ sudo apt-get update
+$ sudo apt-get install nodejs
+$ sudo apt-get install npm
+```
 ### 6. Install plugins for Grunt
 ```bash
-$ ./install.sh
+$ ./prepare_grunt.sh
 ```
 ### 7. Generate minification version of tomo_raycaster2
 ```bash
 $ grunt
 ```
-### 8. Go back to the dir tomo_raycaster2_examples
+### 8. In order to check whether tomo_raycaster2 is properly installed, go to test directory.
 ```bash
-$ cd ..
+$ cd test
+$ ./upload_dependencies.sh
+$ ./start_http_server.sh
 ```
-### 9. Start python http server
+### 9. Go back to the root directory tomo_raycaster2_examples
+```bash
+$ cd ../../
+```
+### 10. Start python http server
 ```bash
 $ ./start_server.sh
 

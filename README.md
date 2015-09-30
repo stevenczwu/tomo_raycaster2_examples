@@ -1,64 +1,10 @@
 # Examples for [tomo_raycaster2](https://github.com/kit-ipe/tomo_raycaster2)
-## Workflow:
-### 1. Clone this repo
-```bash
-$ git clone https://github.com/kit-ipe/tomo_raycaster2_examples.git
-```
-### 2. Go to the dir where you cloned repo
-```bash
-$ cd tomo_raycaster2_examples
-```
-### 3. Download submodules.
-```bash
-$ git submodule init
-$ git submodule update
-$ git submodule update --remote --merge
-```
-### 4. Go to the dir where stored tomo_raycaster2
-```bash
-$ cd tomo_raycaster2
-```
-### 5. Install npm
-* Opensuse 13.2
-
-```bash
-$ sudo zypper addrepo http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_13.2/ Node.js
-$ sudo zypper in npm
-```
-* Archlinux
-```bash
-$ sudo pacman -S npm
-```
-* Ubuntu 14.04
-```bash
-$ sudo apt-get update
-$ sudo apt-get install nodejs
-$ sudo apt-get install npm
-```
-### 6. Install plugins for Grunt
-```bash
-$ ./prepare_grunt.sh
-```
-### 7. Generate minification version of tomo_raycaster2
-```bash
-$ grunt
-```
-### 8. In order to check whether tomo_raycaster2 is properly installed, go to test directory.
-```bash
-$ cd test
-$ ./upload_dependencies.sh
-$ ./start_http_server.sh
-```
-### 9. Go back to the root directory tomo_raycaster2_examples
-```bash
-$ cd ../../
-```
-### 10. Start python http server
-```bash
-$ ./start_server.sh
-
-```
-###10. Point your browser to [localhost:10002/examples](http://localhost:10002/examples).
+Online examples:
+### 1. Breast0 [Breast0](http://kit-ipe.github.io/tomo_raycaster2_examples/examples/breast0)
+### 2. Breast1 [Breast1](http://kit-ipe.github.io/tomo_raycaster2_examples/examples/breast1)
+### 3. Breast2 [Breast2](http://kit-ipe.github.io/tomo_raycaster2_examples/examples/breast2)
+### 4. Sara(fly) [Sara(fly)](http://kit-ipe.github.io/tomo_raycaster2_examples/examples/sara)
+### 5. Lidar [Lidar](http://kit-ipe.github.io/tomo_raycaster2_examples/examples/lidar)
 
 ## LICENSE
 

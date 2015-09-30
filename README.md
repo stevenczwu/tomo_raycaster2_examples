@@ -11,7 +11,6 @@ $ cd tomo_raycaster2_examples
 ### 3. Download submodules.
 ```bash
 $ git submodule init
-$ git submodule update
 $ git submodule update --remote --merge
 ```
 ### 4. Start python http server

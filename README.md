@@ -14,51 +14,12 @@ $ git submodule init
 $ git submodule update
 $ git submodule update --remote --merge
 ```
-### 4. Go to the dir where stored tomo_raycaster2
+### 4. Start python http server
 ```bash
-$ cd tomo_raycaster2
-```
-### 5. Install npm
-* Opensuse 13.2
-
-```bash
-$ sudo zypper addrepo http://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_13.2/ Node.js
-$ sudo zypper in npm
-```
-* Archlinux
-```bash
-$ sudo pacman -S npm
-```
-* Ubuntu 14.04
-```bash
-$ sudo apt-get update
-$ sudo apt-get install nodejs
-$ sudo apt-get install npm
-```
-### 6. Install plugins for Grunt
-```bash
-$ ./prepare_grunt.sh
-```
-### 7. Generate minification version of tomo_raycaster2
-```bash
-$ grunt
-```
-### 8. In order to check whether tomo_raycaster2 is properly installed, go to test directory.
-```bash
-$ cd test
-$ ./upload_dependencies.sh
-$ ./start_http_server.sh
-```
-### 9. Go back to the root directory tomo_raycaster2_examples
-```bash
-$ cd ../../
-```
-### 10. Start python http server
-```bash
-$ ./start_server.sh
+$ ./start_local_http_server.sh
 
 ```
-###10. Point your browser to [localhost:10002/examples](http://localhost:10002/examples).
+### 5. Point your browser to [localhost:10002/examples](http://localhost:10002/examples).
 
 ## LICENSE
 

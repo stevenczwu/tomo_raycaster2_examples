@@ -1,0 +1,70 @@
+<html lang="en">
+	<head>
+		<title>Breast2 - WebGL Volume Rendering</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+ 
+		<script src="../libs/threejs/build/three.min.js"></script>
+		<script src="../libs/OrbitControls.js"></script>
+		<script src="../libs/dat.gui/dat.gui.min.js"></script>
+		<script src="../libs/dat.gui.helper.js"></script>
+		<script src="../libs/embeddedjs/ejs.js"></script>
+<!-- 
+	 	<script src="../../tomo_raycaster2/build/volumeRaycaster.min.js"></script>
+ -->	 	
+	 	<script src="../../tomo_raycaster2/build/volumeRaycaster.js"></script>
+<!-- 
+ 		<script src="../../tomo_raycaster2/build/volumeRaycaster.with-deps.min.js"></script>
+ -->
+
+ 	</head>
+	<body>
+		<div id="container">
+		</div>
+
+		<img id="transferFunctionImg"/>
+
+		<script>
+
+			config1 = {
+			    "dom_container_id": "container",
+			    "slicemaps_paths": [
+                                'Jena_P16_km3-OverlaysNew_oldTransm-reflXY_fused_4x4_1.png',
+                                'Jena_P16_km3-OverlaysNew_oldTransm-reflXY_fused_4x4_2.png',
+                                'Jena_P16_km3-OverlaysNew_oldTransm-reflXY_fused_4x4_3.png',
+                                'Jena_P16_km3-OverlaysNew_oldTransm-reflXY_fused_4x4_4.png',
+                                'Jena_P16_km3-OverlaysNew_oldTransm-reflXY_fused_4x4_5.png',
+                                'Jena_P16_km3-OverlaysNew_oldTransm-reflXY_fused_4x4_6.png',
+                                'Jena_P16_km3-OverlaysNew_oldTransm-reflXY_fused_4x4_7.png',
+                                'Jena_P16_km3-OverlaysNew_oldTransm-reflXY_fused_4x4_8.png'
+			    ],
+                            "shader_name": "secondPassFusion",
+                            "slices_range": [0, 128],			
+                            "row_col": [4, 4],
+                            "render_size": [512, 512],
+                            "renderer_canvas_size": [512,512],	
+                            "opacity_factor": 80,
+                            "color_factor": 50,
+                            "x_min": 0,
+                            "x_max": 1,
+                            "l": 100,
+                            "s" : 100,
+                            "hMin" : 0,
+                            "hMax" : 100,
+                            "minRefl" : 0,
+                            "minSos" : 0,
+                            "minAtten" : 0, 
+                            "maxRefl" : 100,
+                            "maxSos" : 100,
+                            "maxAtten" : 100,
+                            "zFactor" : 0.56
+			};
+
+			rcl2 = new VRC.VolumeRaycaster(config1);
+
+			InitGUI(rcl2.getConfig(), rcl2);
+			
+		</script>
+
+	</body>
+</html>

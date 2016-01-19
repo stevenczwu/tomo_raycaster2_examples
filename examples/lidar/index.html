@@ -6,6 +6,7 @@
 
     <script src="../libs/threejs/build/three.min.js"></script>
     <script src="../libs/OrbitControls.js"></script>
+    <script src="../libs/TrackballControls.js"></script>
     <script src="../libs/dat.gui/dat.gui.min.js"></script>
     <script src="../libs/dat.gui.helper.js"></script>
     <script src="../libs/embeddedjs/ejs.js"></script>
@@ -27,11 +28,13 @@
 <script>
 config = {
     "dom_container_id": "container",
-    "slicemaps_paths": [
-        'slicemap_16944_1.png'
-    ],
+    // resolution 256x256
+    //"slicemaps_paths": [
+    //    'slicemap_16944_1.png'
+    //],
+    //"row_col": [16, 16],
     /*
-    // Line width 1
+    // Line width 1, resolution 1024x1024
     "slicemaps_paths": [
         '16944_4096_4_4_0.png',
         '16944_4096_4_4_1.png',
@@ -40,9 +43,10 @@ config = {
         '16944_4096_4_4_4.png',
         '16944_4096_4_4_5.png',
         '16944_4096_4_4_6.png'
-    ],*/
-    /*
-    // Line width 10
+    ],
+    "row_col": [4, 4],
+    */
+    // Line width 10, resolution 1024x1024
     "slicemaps_paths": [
         'slicemap_16944_4x4_0.png',
         'slicemap_16944_4x4_1.png',
@@ -51,12 +55,12 @@ config = {
         'slicemap_16944_4x4_4.png',
         'slicemap_16944_4x4_5.png',
         'slicemap_16944_4x4_6.png'
-    ],*/
+    ],
+    "row_col": [4, 4],
     "slices_range": [0, 110],
+    "shader_name": "secondPassLidar",
     "gray_min": 0.01,
     "gray_max": 0.99,
-    //"row_col": [4, 4],
-    "row_col": [16, 16],
     "steps": 256,
     "absorption_mode": 1,
     "tf_colors": [

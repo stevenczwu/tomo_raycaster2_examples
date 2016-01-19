@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+<title>ASTOR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="../libs/threejs/build/three.min.js"></script>
+    <script src="../libs/OrbitControls.js"></script>
+    <script src="../libs/TrackballControls.js"></script>
+    <script src="../libs/dat.gui/dat.gui.min.js"></script>
+    <script src="../libs/dat.gui.helper.js"></script>
+    <script src="../libs/embeddedjs/ejs.js"></script>
+    <!-- 
+    <script src="../../tomo_raycaster2/build/volumeRaycaster.min.js"></script>
+    -->	 	
+    <script src="../../tomo_raycaster2/build/volumeRaycaster.js"></script>
+    <!-- 
+    <script src="../../tomo_raycaster2/build/volumeRaycaster.with-deps.min.js"></script>
+    -->
+</head>
+
+<body>
+
+<div id="container"></div>
+
+<img id="transferFunctionImg"/>
+
+<script>
+
+config = {
+
+"dom_container_id": "container",
+"slicemaps_paths": [
+    "./slicemaps/slices_8bit/slicemap0.jpeg",
+    "./slicemaps/slices_8bit/slicemap1.jpeg", 
+    "./slicemaps/slices_8bit/slicemap2.jpeg",
+    "./slicemaps/slices_8bit/slicemap3.jpeg",
+    "./slicemaps/slices_8bit/slicemap4.jpeg",
+    "./slicemaps/slices_8bit/slicemap5.jpeg", 
+    "./slicemaps/slices_8bit/slicemap6.jpeg",
+    "./slicemaps/slices_8bit/slicemap7.jpeg",
+    "./slicemaps/slices_8bit/slicemap8.jpeg",
+    "./slicemaps/slices_8bit/slicemap9.jpeg", 
+    "./slicemaps/slices_8bit/slicemap10.jpeg",
+    "./slicemaps/slices_8bit/slicemap11.jpeg",
+    "./slicemaps/slices_8bit/slicemap12.jpeg",
+    "./slicemaps/slices_8bit/slicemap13.jpeg", 
+    "./slicemaps/slices_8bit/slicemap14.jpeg",
+    "./slicemaps/slices_8bit/slicemap15.jpeg"],
+"slices_range": [0, 1024],
+"row_col": [8, 8],
+"renderer_size": [512, 512],
+"renderer_canvas_size": ['*', '*'],
+"steps": 256,
+"absorption_mode": 1,
+"opacity_factor": 35,
+"color_factor": 3,
+"colormap": 2,
+"x_min": 0.0,
+"x_max": 1.0,
+"auto_steps": true,
+"tf_colors": [
+    {"pos": 0.25,"color": "#7CFF79"},
+    {"pos": 0.5, "color": "#FF9400"},
+    {"pos": 1.0, "color": "#7F0000"},
+]
+}
+
+rcl2 = new VRC.VolumeRaycaster(config);
+rcl2.setBackgroundColor("#000");
+InitGUI(rcl2.getConfig(), rcl2);	
+</script>
+
+</body>
+</html>

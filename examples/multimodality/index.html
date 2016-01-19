@@ -39,11 +39,12 @@
                                 'phantom8.png',
                                 'phantom9.png',
 			    ],
+                            "steps" : 256,
                             "shader_name": "secondPassFusion",
                             "slices_range": [0, 128],			
                             "row_col": [4, 4],
-                            "render_size": [512, 512],
-                            "renderer_canvas_size": [512,512],	
+                            "render_size": [1024, 1024],
+                            "renderer_canvas_size": ['*','*'],	
                             "opacity_factor": 40,
                             "color_factor": 0.4,
                             "x_min": 0,
@@ -62,7 +63,7 @@
 			};
 
 			rcl2 = new VRC.VolumeRaycaster(config1);
-
+                        rcl2.setBackgroundColor("#000");
 			InitGUI(rcl2.getConfig(), rcl2);
 			
 		</script>

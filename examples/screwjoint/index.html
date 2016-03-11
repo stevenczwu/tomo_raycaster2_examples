@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+<title>ASTOR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <script src="../libs/threejs/build/three.min.js"></script>
+    <script src="../libs/OrbitControls.js"></script>
+    <script src="../libs/TrackballControls.js"></script>
+    <script src="../libs/dat.gui/dat.gui.min.js"></script>
+    <script src="../libs/dat.gui.helper.js"></script>
+    <script src="../libs/embeddedjs/ejs.js"></script>
+    <!-- 
+    <script src="../../tomo_raycaster2/build/volumeRaycaster.min.js"></script>
+    -->	 	
+    <script src="../../tomo_raycaster2/build/volumeRaycaster.js"></script>
+    <!-- 
+    <script src="../../tomo_raycaster2/build/volumeRaycaster.with-deps.min.js"></script>
+    -->
+</head>
+
+<body>
+
+<div id="container"></div>
+
+<img id="transferFunctionImg"/>
+
+<script>
+
+config = {
+
+"dom_container_id": "container",
+"slicemaps_paths": [
+    "data_4x4_0.png",
+    "data_4x4_1.png",
+    "data_4x4_2.png"],
+"slices_range": [0, 149],
+"row_col": [8, 8],
+"renderer_size": [512, 512],
+"renderer_canvas_size": ['*', '*'],
+"steps": 256,
+"auto_steps": true,
+// mode 0: MIPS
+// mode 1: x-ray
+// mode 2: maximum-projection-intensity
+"absorption_mode": 2,
+"gray_min": 0.001,
+"gray_max": 0.008,
+"tf_colors": [
+    {"pos": 0.0,"color": "#7CFF79"},
+    {"pos": 0.5, "color": "#FF9400"},
+    {"pos": 1.0, "color": "#7F0000"},
+]
+}
+
+rcl2 = new VRC.VolumeRaycaster(config);
+rcl2.setBackgroundColor("#000");
+InitGUI(rcl2.getConfig(), rcl2);	
+</script>
+
+</body>
+</html>

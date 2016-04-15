@@ -10,6 +10,7 @@
     <script src="../libs/dat.gui/dat.gui.min.js"></script>
     <script src="../libs/dat.gui.helper.js"></script>
     <script src="../libs/embeddedjs/ejs.js"></script>
+    <script src="../libs/dat.gui/stats.min.js"></script> <!-- FPS -->
     <!-- 
     <script src="../../tomo_raycaster2/build/volumeRaycaster.min.js"></script>
     -->	 	
@@ -47,7 +48,7 @@ config = {
     "./slicemaps/slices_8bit/slicemap13.jpeg", 
     "./slicemaps/slices_8bit/slicemap14.jpeg",
     "./slicemaps/slices_8bit/slicemap15.jpeg"],
-"slices_range": [0, 1024],
+"slices_range": [0, '*'],
 "row_col": [8, 8],
 "renderer_size": [512, 512],
 "renderer_canvas_size": ['*', '*'],

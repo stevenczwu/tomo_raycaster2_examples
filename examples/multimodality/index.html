@@ -9,6 +9,7 @@
 		<script src="../libs/dat.gui/dat.gui.min.js"></script>
 		<script src="../libs/dat.gui.helper.js"></script>
 		<script src="../libs/embeddedjs/ejs.js"></script>
+		<script src="../libs/dat.gui/stats.min.js"></script> <!-- FPS -->
 <!-- 
 	 	<script src="../../tomo_raycaster2/build/volumeRaycaster.min.js"></script>
  -->	 	
@@ -41,7 +42,7 @@
 			    ],
                             "steps" : 256,
                             "shader_name": "secondPassFusion",
-                            "slices_range": [0, 128],			
+                            "slices_range": [0, '*'],			
                             "row_col": [4, 4],
                             "render_size": [1024, 1024],
                             "renderer_canvas_size": ['*','*'],	

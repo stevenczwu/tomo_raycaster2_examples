@@ -10,6 +10,7 @@
     <script src="../libs/dat.gui/dat.gui.min.js"></script>
     <script src="../libs/dat.gui.helper.js"></script>
     <script src="../libs/embeddedjs/ejs.js"></script>
+    <script src="../libs/dat.gui/stats.min.js"></script> <!-- FPS -->
     <!-- 
     <script src="../../tomo_raycaster2/build/volumeRaycaster.min.js"></script>
     -->	 	
@@ -57,7 +58,7 @@ config = {
         'slicemap_16944_4x4_6.png'
     ],
     "row_col": [4, 4],
-    "slices_range": [0, 110],
+    "slices_range": [0, '*'],
     "shader_name": "secondPassLidar",
     "gray_min": 0.01,
     "gray_max": 0.99,
